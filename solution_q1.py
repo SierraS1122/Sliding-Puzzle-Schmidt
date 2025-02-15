@@ -153,3 +153,93 @@ if cur_lst[4] == "_":
         print('')
         print("Move:", opt4_lst[4],'R', sep='')
         representation(opt4_lst)
+
+#Middle Right Empty Moves
+if cur_lst[5] == "_":
+    #Option 1 (Number Up)
+        opt1_lst = cur_lst.copy()
+        opt1_lst[5] = cur_lst[2]
+        opt1_lst[2] = cur_lst[5]
+        print('')
+        print("Move:", opt1_lst[5],'D', sep='')
+        representation(opt1_lst)
+
+    #Option 2 (Number Left)
+        opt2_lst = cur_lst.copy()
+        opt2_lst[5] = cur_lst[4]
+        opt2_lst[4] = cur_lst[5]
+        print('')
+        print("Move:", opt2_lst[5],'R', sep='')
+        representation(opt2_lst)
+              
+    #Option 3 (Number Below)
+        opt3_lst = cur_lst.copy()
+        opt3_lst[5] = cur_lst[8]
+        opt3_lst[8] = cur_lst[5]
+        print('')
+        print("Move:", opt3_lst[5],'U', sep='')
+        representation(opt3_lst)
+
+#Bottom Left Empty Moves
+if cur_lst[6] == "_":
+    #Option 1 (Number Up)
+        opt1_lst = cur_lst.copy()
+        opt1_lst[6] = cur_lst[3]
+        opt1_lst[3] = cur_lst[6]
+        print('')
+        print("Move:", opt1_lst[6],'D', sep='')
+        representation(opt1_lst)
+
+    #Option 2 (Number Right)
+        opt2_lst = cur_lst.copy()
+        opt2_lst[6] = cur_lst[7]
+        opt2_lst[7] = cur_lst[6]
+        print('')
+        print("Move:", opt2_lst[6],'L', sep='')
+        representation(opt2_lst)
+              
+
+#Bottom Middle Empty Moves
+if cur_lst[7] == "_":
+    #Option 1 (Number Up)
+        opt1_lst = cur_lst.copy()
+        opt1_lst[7] = cur_lst[4]
+        opt1_lst[4] = cur_lst[7]
+        print('')
+        print("Move:", opt1_lst[7],'D', sep='')
+        representation(opt1_lst)
+
+    #Option 2 (Number Right)
+        opt2_lst = cur_lst.copy()
+        opt2_lst[7] = cur_lst[8]
+        opt2_lst[8] = cur_lst[7]
+        print('')
+        print("Move:", opt2_lst[7],'L', sep='')
+        representation(opt2_lst)
+
+    #Option 3 (Number Left)
+        opt3_lst = cur_lst.copy()
+        opt3_lst[7] = cur_lst[6]
+        opt3_lst[6] = cur_lst[7]
+        print('')
+        print("Move:", opt3_lst[7],'R', sep='')
+        representation(opt3_lst)
+              
+#Bottom Right Empty Moves
+if cur_lst[8] == "_":
+    #Option 1 (Number Up)
+        opt1_lst = cur_lst.copy()
+        opt1_lst[8] = cur_lst[5]
+        opt1_lst[5] = cur_lst[8]
+        print('')
+        print("Move:", opt1_lst[8],'D', sep='')
+        representation(opt1_lst)
+
+    #Option 2 (Number Left)
+        opt2_lst = cur_lst.copy()
+        opt2_lst[8] = cur_lst[7]
+        opt2_lst[7] = cur_lst[8]
+        print('')
+        print("Move:", opt2_lst[8],'R', sep='')
+        representation(opt2_lst)
+
