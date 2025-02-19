@@ -798,14 +798,13 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
                 #print (action_queue)
 
 while (generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_visited, found_solution)) != True:
-    if cur_lst != goal_state:
-        #print(found_solution)
-        cur_lst = state_queue[1]
-        cur_action = action_queue[1]
-        del(action_queue[0])
-        del(state_queue[0])
-        #print("State Queue after", state_queue)
-        #print("Action Queue after", action_queue)
+    #print(found_solution)
+    state_queue.remove(cur_lst)
+    action_queue.remove(cur_action)
+    cur_lst = state_queue[0]
+    cur_action = action_queue[0]
+    #print("State Queue after", state_queue)
+    #print("Action Queue after", action_queue)
     #print('States Visited', states_visited)
 
 #print(action_queue[-1])
