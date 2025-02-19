@@ -50,7 +50,10 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
-                action_queue += [cur_action,move]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
                 print (action_queue)
 
         #Option 2 (Number Below)
@@ -64,7 +67,10 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
-                action_queue += [cur_action,move]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
                 print (action_queue)
         
 
@@ -85,7 +91,10 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
-                action_queue += [[cur_action,move]]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
                 print (action_queue)
 
         #Option 2 (Number Right)
@@ -99,6 +108,11 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
                 
         #Option 3 (Number Below)
             opt3_lst = cur_lst.copy()
@@ -114,6 +128,11 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt3_lst not in states_visited:
                 state_queue += [opt3_lst]
                 states_visited += [opt3_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
                 
                 
     #Top Right Empty Moves
@@ -130,6 +149,11 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
         #Option 2 (Number Below)
             opt2_lst = cur_lst.copy()
@@ -142,6 +166,11 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
     
 
     #Middle Left Empty Moves
@@ -157,6 +186,11 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
         #Option 2 (Number Right)
             opt2_lst = cur_lst.copy()
@@ -169,6 +203,11 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
                 
         #Option 3 (Number Below)
             opt3_lst = cur_lst.copy()
@@ -181,6 +220,11 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt3_lst not in states_visited:
                 state_queue += [opt3_lst]
                 states_visited += [opt3_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
     #Middle Middle Empty Moves
     if cur_lst[4] == "_":
@@ -195,7 +239,10 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
-                action_queue += [[cur_action,move]]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
                 print (action_queue)
 
         #Option 2 (Number Right)
@@ -209,7 +256,10 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
-                action_queue += [[cur_action,move]]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
                 print (action_queue)
                 
         #Option 3 (Number Below)
@@ -223,7 +273,10 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt3_lst not in states_visited:
                 state_queue += [opt3_lst]
                 states_visited += [opt3_lst]
-                action_queue += [cur_action,move]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
                 print (action_queue)
 
         #Option 4 (Number Left)
@@ -237,7 +290,10 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt4_lst not in states_visited:
                 state_queue += [opt4_lst]
                 states_visited += [opt4_lst]
-                action_queue += [cur_action,move]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
                 print (action_queue)
 
     #Middle Right Empty Moves
@@ -247,33 +303,51 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             opt1_lst[5] = cur_lst[2]
             opt1_lst[2] = cur_lst[5]
             print('')
-            print("Move:", opt1_lst[5]+'D')
+            move = opt1_lst[5]+'D'
+            print("Move:", move)
             representation(opt1_lst)
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
         #Option 2 (Number Left)
             opt2_lst = cur_lst.copy()
             opt2_lst[5] = cur_lst[4]
             opt2_lst[4] = cur_lst[5]
             print('')
-            print("Move:", opt2_lst[5]+'R')
+            move = opt2_lst[5]+'R'
+            print("Move:", move)
             representation(opt2_lst)
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
                 
         #Option 3 (Number Below)
             opt3_lst = cur_lst.copy()
             opt3_lst[5] = cur_lst[8]
             opt3_lst[8] = cur_lst[5]
             print('')
-            print("Move:", opt3_lst[5]+'U')
+            move = opt3_lst[5]+'U'
+            print("Move:", move)
             representation(opt3_lst)
             if opt3_lst not in states_visited:
                 state_queue += [opt3_lst]
                 states_visited += [opt3_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
     #Bottom Left Empty Moves
     if cur_lst[6] == "_":
@@ -282,22 +356,34 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             opt1_lst[6] = cur_lst[3]
             opt1_lst[3] = cur_lst[6]
             print('')
-            print("Move:", opt1_lst[6]+'D')
+            move = opt1_lst[6]+'D'
+            print("Move:", move)
             representation(opt1_lst)
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
         #Option 2 (Number Right)
             opt2_lst = cur_lst.copy()
             opt2_lst[6] = cur_lst[7]
             opt2_lst[7] = cur_lst[6]
             print('')
-            print("Move:", opt2_lst[6]+'L')
+            move = opt2_lst[6]+'L'
+            print("Move:", move)
             representation(opt2_lst)
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
                 
 
     #Bottom Middle Empty Moves
@@ -307,33 +393,51 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             opt1_lst[7] = cur_lst[4]
             opt1_lst[4] = cur_lst[7]
             print('')
-            print("Move:", opt1_lst[7]+'D')
+            move = opt1_lst[7]+'D'
+            print("Move:", move)
             representation(opt1_lst)
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
         #Option 2 (Number Right)
             opt2_lst = cur_lst.copy()
             opt2_lst[7] = cur_lst[8]
             opt2_lst[8] = cur_lst[7]
             print('')
-            print("Move:", opt2_lst[7]+'L')
+            move = opt2_lst[7]+'L'
+            print("Move:", move)
             representation(opt2_lst)
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
         #Option 3 (Number Left)
             opt3_lst = cur_lst.copy()
             opt3_lst[7] = cur_lst[6]
             opt3_lst[6] = cur_lst[7]
             print('')
-            print("Move:", opt3_lst[7]+'R')
+            move =  opt3_lst[7]+'R'
+            print("Move:", move)
             representation(opt3_lst)
             if opt3_lst not in states_visited:
                 state_queue += [opt3_lst]
                 states_visited += [opt3_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
                 
     #Bottom Right Empty Moves
     if cur_lst[8] == "_":
@@ -342,11 +446,17 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             opt1_lst[8] = cur_lst[5]
             opt1_lst[5] = cur_lst[8]
             print('')
-            print("Move:", opt1_lst[8]+'D')
+            move = opt1_lst[8]+'D'
+            print("Move:", move)
             representation(opt1_lst)
             if opt1_lst not in states_visited:
                 state_queue += [opt1_lst]
                 states_visited += [opt1_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
         #Option 2 (Number Left)
             opt2_lst = cur_lst.copy()
@@ -359,6 +469,11 @@ def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_
             if opt2_lst not in states_visited:
                 state_queue += [opt2_lst]
                 states_visited += [opt2_lst]
+                print("current action", cur_action)
+                new_action = cur_action + [move]
+                print("New action: new_action")
+                action_queue += [new_action]
+                print (action_queue)
 
 while cur_lst != ['_','1','2','3','4','5','6','7','8']:
     generate_next_states(cur_lst, state_queue, cur_action, action_queue,states_visited)
