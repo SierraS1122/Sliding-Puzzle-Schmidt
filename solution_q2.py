@@ -4,6 +4,7 @@ import math
 
 goal_state = ['1','2','3','8','_','4','7','6','5']
 found_solution = False
+#expansions = 0
 
 def representation(lst):
     pass
@@ -39,6 +40,8 @@ representation(cur_lst)
 
 def generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_visited, found_solution):
     #Top Left Empty Moves
+#    global expansions
+#    expansions += 1
     
     if cur_lst[0] == "_":
         
@@ -817,19 +820,21 @@ def dfs(cur_lst, state_queue, cur_action, action_queue, states_visited, found_so
         #print('States Visited', states_visited)
 
         #print(action_queue[-1])
-    solution_BFS = ','.join(action_queue[-1])
-    print("The solution of Q.1")
-    print (solution_BFS)
-    print(state_queue[-1])
+    solution_DFS = ','.join(action_queue[-1])
+    print("The solution of Q2.1.a is")
+    print (solution_DFS)
+#    global expansions
+#    print("DFS expansions:", expansions)
+    
 
-
+    
     with open('solution.txt', 'w') as f:
-        f.write(solution_BFS)
-        print("Solution has been written to solution.txt")
-        print(solution_BFS)
+        f.write(solution_DFS)
+        #print("Solution has been written to solution.txt")
+        #print(solution_DFS)
+    
 
-
-
+#expansions = 0
 def bfs(cur_lst, state_queue, cur_action, action_queue, states_visited, found_solution):
     while (generate_next_states(cur_lst, state_queue, cur_action, action_queue, states_visited, found_solution)) != True:
         #print(found_solution)
@@ -844,8 +849,10 @@ def bfs(cur_lst, state_queue, cur_action, action_queue, states_visited, found_so
 
     #print(action_queue[-1])
     solution_BFS = ','.join(action_queue[-1])
-    print("The solution of Q.2")
+    print("The solution of Q2.1.b is")
     print (solution_BFS)
+ #   global expansions
+ #   print("BFS expansions:", expansions)
 
 
 
@@ -876,6 +883,7 @@ action_queue += cur_action
 states_visited = []
 
 states_visited += [cur_lst]
+#expansions = 0
 
 #print("Starting Puzzle")
 representation(cur_lst)
@@ -1153,8 +1161,10 @@ states_visited += [cur_lst]
 #print("Starting Puzzle")
 representation(cur_lst)
 
-
+#expansions = 0
 def generate_next_states2(cur_lst, state_queue, cur_action, action_queue, cur_cost, cost_queue, states_visited):
+#    global expansions
+#    expansions += 1
     #Top Left Empty Moves
      
     if cur_lst[0] == "_":
@@ -2129,7 +2139,6 @@ def generate_next_states2(cur_lst, state_queue, cur_action, action_queue, cur_co
                 #print(cost_queue)
 
 goal_state = ['1','2','3','8','_','4','7','6','5']
-
 file = open("input.txt","r")
 input_str = file.read()
 ##print(input_str)
@@ -2155,7 +2164,7 @@ states_visited += [cur_lst]
 
 #print("Starting Puzzle")
 representation(cur_lst)
-
+#expansions = 0
 def representation(lst):
     pass
     #print(lst[0],lst[1],lst[2])
@@ -2199,8 +2208,10 @@ def ucs(cur_lst, state_queue, cur_action, action_queue, cur_cost, cost_queue, st
 
         if cur_lst == goal_state:
             solution_UCS = ','.join(cur_action)
-            print("The solution of Q.3")
+            print("The solution of Q2.1.c is")
             print(solution_UCS)
+ #           global expansions
+ #           print("UCS Expansions:", expansions)
             return
             
    
@@ -2247,7 +2258,7 @@ action_queue += cur_action
 states_visited = []
 
 states_visited += [cur_lst]
-
+#expansions = 0
 #print("Starting Puzzle")
 representation(cur_lst)
 
@@ -2255,8 +2266,9 @@ def a_star_manhattan(cur_lst, state_queue, cur_action, action_queue, cur_cost, c
     while len(state_queue) > 0:  
         if cur_lst == goal_state:
             solution_astar_manhattan = ','.join(cur_action)
-            print("The solution of Q.4")
+            print("The solution of Q2.1.d is")
             print(solution_astar_manhattan)
+ #           print("A_MAN Expansions:", expansions)
             return
             
         generate_next_states2(cur_lst, state_queue, cur_action, action_queue, cur_cost, cost_queue, states_visited)
@@ -2309,7 +2321,7 @@ action_queue += cur_action
 states_visited = []
 
 states_visited += [cur_lst]
-
+#expansions = 0
 #print("Starting Puzzle")
 representation(cur_lst)
 
@@ -2317,8 +2329,9 @@ def a_star_straight_line(cur_lst, state_queue, cur_action, action_queue, cur_cos
     while len(state_queue) > 0:  
         if cur_lst == goal_state:
             solution_astar_straight = ','.join(cur_action)
-            print("The solution of Q.5")
+            print("The solution of Q2.1.e is")
             print(solution_astar_straight)
+ #           print("AStraight Expansions:", expansions)
             return
             
         generate_next_states2(cur_lst, state_queue, cur_action, action_queue, cur_cost, cost_queue, states_visited)
